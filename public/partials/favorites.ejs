@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+        <form>
+            <div ng-repeat="fav in favCtrl.favorites">
+              <img ng-show="!favCtrl.isDesigner(fav)" ng-src="{{fav.favorited.first_photo.medium_url}}">
+              <img ng-show="favCtrl.isDesigner(fav)" ng-src="{{fav.favorited.users[0].photo_url}}">
+              Name: {{fav.favorited.name}} ID: {{fav.id}}
+            </div>
+        </form>
+    </div>
+</div>
